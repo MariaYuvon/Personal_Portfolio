@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   createParticles();
 
-  // Mini Projects Filter Functionality
   const filterButtons = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(".mini-project-card");
 
@@ -120,21 +119,21 @@ document.addEventListener("DOMContentLoaded", () => {
               card.style.pointerEvents = "none"; // Disable interaction during transition
           });
 
-         
+          // Show cards matching the filter after a delay
           setTimeout(() => {
               projectCards.forEach((card) => {
-                  const tech = card.getAttribute("data-tech");
-                  if (filter === "all" || tech === filter) {
+                  const techList = card.getAttribute("data-tech").split(" "); // Split tech into an array
+                  if (filter === "all" || techList.includes(filter)) {
                       card.style.display = "flex";
                       setTimeout(() => {
                           card.classList.add("visible");
-                          card.style.pointerEvents = "auto"; 
+                          card.style.pointerEvents = "auto";
                       }, 10);
                   } else {
                       card.style.display = "none";
                   }
               });
-          }, 500); 
+          }, 500); // Delay matches the CSS transition duration
       });
   });
 });
