@@ -1,4 +1,5 @@
 /* Base Styles */
+
 :root {
   --primary-color: #00f5ff;
   --secondary-color: #ff00e6;
@@ -13,6 +14,7 @@
   --glow-shadow: 0 0 15px rgba(0, 245, 255, 0.5);
   --border-radius: 8px;
 }
+ 
 
 * {
   margin: 0;
@@ -418,7 +420,7 @@ img {
   position: relative;
   z-index: 1;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 20px;
   max-width: 1000px;
@@ -439,6 +441,11 @@ img {
   overflow: hidden;
   min-width: 150px;
   max-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .skill-tab::before {
@@ -471,6 +478,14 @@ img {
 
 .skill-tab i {
   font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+}
+.skill-tab img {
+  width: 4rem;
+  height: 4rem;
+  filter: hue-rotate(180deg);
   color: var(--primary-color);
   margin-bottom: 15px;
   text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
@@ -956,8 +971,11 @@ footer::before {
   }
 
   .skills-tab-container {
+    flex-wrap: wrap;
       gap: 15px;
   }
+
+
 
   
 }
@@ -1053,6 +1071,7 @@ footer::before {
       flex: 1 1 120px;
       min-width: 120px;
       max-width: 150px;
+      
   }
 }
 
