@@ -32,6 +32,7 @@ body {
   overflow-x: hidden;
 }
 
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -280,7 +281,7 @@ img {
 
 .hero-image {
   flex: 0 0 auto;
-  max-width: 350px;
+  max-width: 500px;
   margin-left: 30px;
   position: relative;
 }
@@ -954,6 +955,8 @@ footer::before {
   .skills-tab-container {
       gap: 15px;
   }
+
+  
 }
 
 @media (max-width: 768px) {
